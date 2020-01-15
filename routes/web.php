@@ -17,11 +17,15 @@ Route::get('/', function () {
 
 Route::get('/product', 'ProductController@index');
 
-Route::post('/product/search', 'ProductController@index');
+Route::post('/product/search', 'ProductController@search');
 
 Route::get('/product/search', 'ProductController@search');
 
 Route::get('/product/edit/{id?}','ProductController@edit');
+Route::post('/product/edit','ProductController@insert');
 
 Route::post('/product/update','ProductController@update');
+
+Route::get('/product/remove/{id}','ProductController@remove');
+
 
